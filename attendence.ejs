@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <style>
+body{
+            background-color: rgb(153, 255, 255);
+        }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: Arial;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}  
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #e5e5e5;}
+</style>
+
+<table>
+  <!-- table content -->
+</table>
+
+</head>
+<body>
+
+   <h1>Attendance Tracker</h1>
+    <div id="attendenceList">
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Date</th> 
+              <th>Time</th>
+            </tr>
+        <% data.forEach(function(entry) { %>
+            <div class="entry">
+                <tr>
+                <td><p><%= entry.name %></p></td>
+                <td><p><%= entry.date %></p></td>
+                <td><p><%= entry.time %></p></td>
+            </tr>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>
